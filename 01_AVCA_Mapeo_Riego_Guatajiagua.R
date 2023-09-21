@@ -39,14 +39,14 @@ pacman::p_load(swfscMisc,
 # 0. Datos -----
 # 0.1 Vinculo a cuenta de Kobo ----
 kobo_setup(url = "https://kobonew.ifrc.org/", 
-           token = "5947fd613937057832428672fa1b834a4117940d")
+           token = "TOKEN_KOBO_SERVER")
 
 
 # 0.2 Lista de poryectos en cuenta de Kobo ----
 lista <- kobo_asset_list() 
 
 # 0.3 Cargar base de datos de herramienta para Amenaza ----
-asset <- kobo_asset("aHNeWBSh7uVMgkFB3MGwcU")
+asset <- kobo_asset("TOKEN_TABLA_GUATAJIAGUA")
 KOBO <- kobo_data(asset) %>%
   dplyr::select("muni","amenaza","otra_amenaza", "A1":"C7")
 
